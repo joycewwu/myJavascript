@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6-3-2</title>
+    <script>
+
+        let myStr = "Tang Poem: 年年歲歲花相似，歲歲年年人不同。";
+
+        //從第13個字串以後取五個值 
+        document.write("抽出子字串：myStr.substr(13, 5) = " + myStr.substr(13, 5) + "<br>");
+        // Result:歲歲花相似
+
+        // 從第13個字串位置取到第15個字串位置
+        document.write("抽出子字串：myStr.substring(13, 15) = " + myStr.substring(13, 15) + "<br>");
+        // Result:歲歲
+
+        // 從第13個字串位置取到第15個字串位置
+        document.write("抽出子字串：myStr.substring(13, 15) = " + myStr.substring(13, 15) + "<br>");
+        // Result:歲歲
+
+        document.write("取代字串：myStr.replace('不同','相同') = " + myStr.replace('不同', '相同') + "<br>");
+
+        document.write("搜尋字串：myStr.search(/歲歲/) = " + myStr.search(/歲歲/) + "<br>");
+
+
+        document.write("匹配字串：myStr.match(/歲歲/) = " + myStr.substr(/歲歲/) + "<br>");
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
