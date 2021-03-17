@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7-3-1</title>
+</head>
+
+<body>
+    <p class="myClass">問世間，</p>
+    <p class="myClass">情是何物，</p>
+    <p class="myClass">直教生死相許。</p>
+    <p class="myClass">Hello World!</p>
+
+    <script>
+
+        // Differences between innerTextt & innerHTML
+        https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_node_textcontent_innerhtml_innertext
+
+
+
+        let p = document.querySelectorAll('p');
+
+        //可以使用類似陣列的操作方式，提供索引值來存取
+        // 在 document 中指定 CSS selectors 所有元素， 回傳 NodeList 物件 。
+        p[0].style.backgroundColor = '#ff0000';
+        p[0].style.color = '#fff';
+
+        // innerHTML此針對整個DOM(html)做更改，文字亦可覆蓋上去
+        // <span></span>裡直接改顏色
+        p[1].innerHTML = '<span style="color: #faf; font-size:50px">...我是誰我在哪...</span>';
+
+        // innerText，此針對文字做更改，需分段式下指令
+        // p[1].innerText = '密室逃脫';
+        // p[1].style.color = '#faf';
+
+        p[1].style.fontSize = '30px';
+        p[2].style.lineHeight = '120px';
+        p[2].style.backgroundColor = '#0000ff';
+        p[2].style.color = '#ffffff';
+        p[2].style.fontSize = '100px';
+
+
+
+    </script>
+
+</body>
+
+</html>
