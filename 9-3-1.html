@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9-3-1</title>
+    <script>
+
+
+        // 查看所有屬性
+        // 欲取得索引值/key，可使用 for(let (property/key/index in dataSet))
+        // "in" 可以查看Object類型物件的屬性和屬性值
+
+
+        let obj = {
+            fname: 'Joyce',
+            lname: 'Wu',
+            age: null,
+            lineId: 'jojoww'
+        }
+        for (let attr in obj) {
+            console.log(`The property in object variable is ${attr}`);
+        }
+
+        // The property in object variable is fname
+        //The property in object variable is lname
+        // The property in object variable is age
+        // The property in object variable is lineId
+
+        // let arr = [
+        //     'a',
+        //     'b',
+        //     'c',
+        // ];
+
+        // for (let key in arr) {
+        //     console.log(`The index number in arrat variable is ${key}`);
+        // }
+
+        // The property in object variable is fname
+        // The property in object variable is lname
+        // The property in object variable is age
+        // The property in object variable is lineId
+
+
+        // "of"取得陣列的值(key)居多
+        // 若是要取得陣列當中的值(key) ， 可以使用 「 for(value of dataSet) {…}」：
+        let arr = [
+            'a',
+            'b',
+            'c',
+        ];
+
+        for (let value of arr) {
+            console.log(`The value is array variable is ${value}`);
+        }
+
+        // 但是取得 obj當中的值(key) 則無法使用 「 for(value of dataSet) {…}」， 因為dataSet 是需要可以迭代的 Iterable 是指變數是可以透過 [0], [1], [2], … , [n] 方式來取得相對應的值
+
+        // 物件內部成員以屬性(Property)的方式存在，沒有「有序的鍵（ Key）」，故無法迭代
+
+
+
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

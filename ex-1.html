@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex-1</title>
+    <script>
+
+        let arr = ['a', 'b', 'c', 'd']
+        let str = "";
+        for (let i = 0; i < arr.length; i++) {
+            if (str == "") { str = arr[i]; }
+            else { str += "," + arr[i]; }    // str = str + "," + arr [i];   / x+=1 ->  x=x+1 
+            // 設在括號裡面過程全印
+            console.log(str);
+
+        }
+        // 設在括號外面求結果
+        console.log(str);
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

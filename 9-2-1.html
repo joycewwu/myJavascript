@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9-2-1</title>
+    <script>
+        let cat = {
+            legs: 4,
+            name: 'Darren',
+            color: 'Tangerine',
+            ability: {
+                jump: function () {
+                    console.log('Jump');
+                },
+                sound: function () {
+                    console.log('Meow~');
+                },
+
+                sleep: function () {
+                    console.log('ZZZzzz...')
+                }
+
+            }
+        };
+        //使用「[ ]」來存取屬性或函式：
+        console.log(cat['legs']);
+        console.log(cat['name']);
+        cat['ability'].sleep();
+        cat['ability'].sound();
+
+        //使用「.」來存取屬性或函式：
+        console.log(cat.legs);
+        console.log(cat.color);
+        cat.ability.sound();
+        cat.ability.sleep();
+
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
