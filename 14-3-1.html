@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>14-3-1</title>
+    <script>
+        //以 function 這個關鍵字的來建立類別（class）
+        var Person = function (firstName) {
+            //以 this 關鍵字作為實體本身
+            this.firstName = firstName;
+        };
+
+        //使用 prototype，為 Person 類別定義了方法 sayHello()
+        //共同的屬性或方法，不見得一定要在類別中定義
+        //也可以透過 prototype 來建立 Person "原型"的方法
+        Person.prototype.sayHello = function () {
+            console.log("Hello, I'm " + this.firstName);
+        };
+
+        //用 new 關鍵字來實體化（變成物件）
+        var person1 = new Person('Alice');
+        var person2 = new Person('Bob');
+
+        //輸出兩個 person 的 firstName
+        console.log(person1.firstName);
+        console.log(person2.firstName);
+
+        person1.sayHello(); // "Hello, I'm Alice"
+        person2.sayHello(); // "Hello, I'm Bob"
+
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

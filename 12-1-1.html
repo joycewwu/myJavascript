@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12-1-1</title>
+    <script>
+
+        //建立基本函式
+        // 呼叫函式
+        // 接續建立函式的內容，我們使用在函式名稱後面加上「()」，便能執行函式內容。
+        // say();
+        function say() {
+            console.log('Hello World!');
+        }
+
+        //帶有參數的函式
+        // 參數傳遞
+        // 將參數設定在「函式的括號內」，同時在外部使用「賦予參數特定值」的函式，便能將「參數的值」傳遞給區塊當中的程式碼使用。
+        function greet(name) {
+            console.log('Hello, ' + name);
+        }
+
+
+
+
+        //有回傳值的函式
+        function getMessage() {
+            return 'Good job!';
+        }
+
+        //依序執行各個函式
+        say();
+        greet('Alex');
+        // getMessage()被 Good job!取代
+        console.log(getMessage());
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

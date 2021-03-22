@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>15-2-4</title>
+    <script>
+
+        var myVar;
+        function myStartFunction() {
+            myVar = setTimeout(alertFunc, 3000, "Bonjour", "madame");
+        }
+
+        function alertFunc(param1, param2) {
+            alert(`你的參數: ${param1}, ${param2}`);
+        }
+
+        myStartFunction();
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

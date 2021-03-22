@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>14-extra</title>
+    <script>
+        let Person = function (name, height, weight, age) {
+            this.hands = 2;
+            this.name = name;
+            this.height = height;
+            this.getName = function () {
+                return this.name;
+            }
+
+            this.getHeight = function () {
+                return this.height;
+            }
+
+
+        }
+
+        let person01 = new Person("Darren", 180, 100, 18);
+        console.log(person01.getName()); // Darren
+        console.log(person01.getHeight()); // 180
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
