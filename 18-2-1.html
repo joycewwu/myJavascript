@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>18-2-1</title>
+    <style>
+        p {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button id="btn" style="width: 200px; height: 100x;">按下後改變文字</button>
+    <br /><br /><br /><br />
+    <div style="width: 200px; height: 200px; border: 1px solid;">
+        <p>請用滑鼠移過此元素</p>
+    </div>
+    <br /><br /><br /><br />
+    <img class="yoga" src="./image/hatha.jpg" width="200px" height="200px" />
+
+    <script>
+        //對 button#btn 註冊 click 事件
+        document.getElementById('btn').addEventListener('click', function (event) {
+
+            //跳出文字訊息
+            alert(this.innerText);
+
+            //修改文字
+            this.innerText = '已改變';
+        });
+
+
+        //對 div 註冊兩個事件，分別是滑鼠移入和移出
+        // ('div')[0]指定第一個div，但此處也只有一個
+
+        let div = document.getElementsByTagName('div')[0]; div.addEventListener('mousemove', function (event) { this.style.backgroundColor = 'lightblue'; this.style.color = 'white' });
+
+
+        div.addEventListener('mouseout', function (event) {
+            this.style.backgroundColor = 'plum';
+        });
+
+        //對 img.yoga 註冊滑鼠移入事件
+        document.querySelector('img.yoga').addEventListener('mousemove', function (event) {
+            this.setAttribute(
+                "src",
+                "./image/yin.jpg"
+            );
+        });
+        //對 img.yoga 註冊滑鼠移出事件
+        document.querySelector('img.yoga').addEventListener('mouseout', function (event) {
+            this.setAttribute(
+                "src",
+                "./image/hatha.jpg"
+            );
+        });
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
