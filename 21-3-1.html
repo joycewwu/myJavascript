@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>21-3-1</title>
+</head>
+
+<body>
+    <p style="color: #7878ff; line-height: 3; font-size: 30px;">Hello World<br />Good job!</p>
+
+    <script>
+
+        //取得 p 元素，並取得 style 屬性中的 css 屬性值
+        let p = document.getElementsByTagName('p')[0];
+        document.write("<hr />");
+        document.write(p.style.color + "<br />");
+        document.write(p.style.lineHeight + "<br />");
+        document.write(p.style.fontSize + "<br />");
+
+        //設定 p 的 color 為 #CFEE99
+        p.style.color = '#CFEE99';
+        p.style['font-size'] = '80px';  //屬性可以用 css 格式
+        p.style['line-height'] = '88px';
+        p.style['backgroundColor'] = 'plum'; //屬性可以用 javascript 格式
+
+
+    </script>
+
+</body>
+
+</html>
