@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>a-exercise01</title>
+    <style>
+        /* * {
+list-style-type: none;
+}
+
+
+#card1 {
+    border: 1px solid salmon;
+    font-size: 20px;
+    color: red;
+}
+
+li {
+    border: 1px solid red; 
+    /* width: 300px; *
+
+
+} */
+        * {
+            color: rebeccapurple;
+            font-weight: 900;
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .wrap {
+            text-align: center;
+            width: 500px;
+            border: 2px solid rebeccapurple;
+            border-radius: 25px;
+            margin-right: 10px;
+            margin-left: 10px;
+            margin-bottom: 50px;
+        }
+
+
+        #name1,
+        #name2,
+        #name3,
+        #name4 {
+            text-align: center;
+            font-weight: 900;
+            color: rebeccapurple;
+            font-size: 20px;
+            padding-bottom: 10px;
+        }
+
+        #age1,
+        #age2,
+        #age3,
+        #age4 {
+            color: slategray;
+            font-size: 16px;
+            padding: 5px 10px;
+        }
+
+        #eng_score1,
+        #eng_score2,
+        #eng_score3,
+        #eng_score4 {
+            color: slategray;
+            font-size: 16px;
+            padding: 5px 10px;
+        }
+
+        #math_score1,
+        #math_score2,
+        #math_score3,
+        #math_score4 {
+            color: slategray;
+            font-size: 16px;
+            padding: 5px 10px;
+        }
+
+        .mathScore {
+            color: white;
+            background: green;
+            padding: 0 5px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div id="myData"></div>
+    <div class="container">
+        <div class="wrap">
+            <img src="./avatar.jpg" alt="" width="250px">
+            <div id="student1"></div>
+            <div id="name1"></div>
+            <div id="age1"></div>
+            <div id="eng_score1"></div>
+            <div id="math_score1"></div>
+        </div>
+
+
+        <div class="wrap">
+            <img src="./avatar1.jpg" alt="" width="250px">
+            <div id="student2"></div>
+            <div id="name2"></div>
+            <div id="age2"></div>
+            <div id="eng_score2"></div>
+            <div id="math_score2"></div>
+        </div>
+
+        <div class="wrap">
+            <img src="./avatar2.jpg" alt="" width="250px">
+            <div id="student3"></div>
+            <div id="name3"></div>
+            <div id="age3"></div>
+            <div id="eng_score3"></div>
+            <div id="math_score3"></div>
+        </div>
+    </div>
+
+
+
+    <script>
+        // 查看所有屬性
+        // 欲取得索引值/key，可使用 for(let (property/key/index in dataSet))
+        // "in" 可以查看Object類型物件的屬性和屬性值
+
+
+        let name = ["Alex", "Bill", "Cook"]
+        let age = ["18", "19", "17"]
+        var eng_score = [87, 95, 100]
+        var math_score = [90, 98, 73]
+
+        // let count = eng_score.length
+        // eng_score = eng_score.reduce
+        // document.write(`age:${eng_score}</br>`);
+
+        // document.write(`座號 1:` + `</br>` + `姓名:` + arrays[0][0] + `</br>` +  `年齡:` + arrays[1][0] + `</br>`+ `英文成績:` + eng_score[0] + `</br>` + `數學成績:` + math_score[0] + `</br>`);
+
+
+
+        // document.write(`座號 2:` + `</br>` + `姓名:` + arrays[0][1] + `</br>` +  `年齡:` + arrays[1][1] + `</br>`+ `英文成績:` + eng_score[1] + `</br>` + `數學成績:` + math_score[1] + `</br>`);
+
+
+        // document.write(`座號 3:` + `</br>` + `姓名:` + arrays[0][2] + `</br>` +  `年齡:` + arrays[1][2] + `</br>`+ `英文成績:` + eng_score[2] + `</br>` + `數學成績:` + math_score[2] + `</br>`);
+
+
+        //建立一個名為avg引數魏array的函式
+        var avg = function (array) {
+            //將array的長度賦給len
+            var len = array.length;
+            var sum = 0;
+            //利用for迴圈遍歷陣列的內容，利用sum累加求和
+            for (var i = 0; i < len; i++) {
+                sum += array[i];
+            }
+            //        返回陣列的和與長度求平均值
+            return sum / len;
+        }
+        // console.log(avg(eng_score));
+
+        document.getElementById("name1").innerHTML = (`姓名: ` + name[0]);
+        document.getElementById("age1").innerHTML = (`年齡: ` + age[0]);
+        document.getElementById("eng_score1").innerHTML = (`英文成績: ` + eng_score[0]);
+        document.getElementById("math_score1").innerHTML = (`數學成績: ` + math_score[0]);
+
+        document.getElementById("name2").innerHTML = (`姓名: ` + name[1]);
+        document.getElementById("age2").innerHTML = (`年齡: ` + age[1]);
+        document.getElementById("eng_score2").innerHTML = (`英文成績: ` + eng_score[1]);
+        document.getElementById("math_score2").innerHTML = (`數學成績: ` + math_score[1]);
+
+        document.getElementById("name3").innerHTML = (`姓名: ` + name[2]);
+        document.getElementById("age3").innerHTML = (`年齡: ` + age[2]);
+        document.getElementById("eng_score3").innerHTML = (`英文成績: ` + eng_score[2]);
+        document.getElementById("math_score3").innerHTML = (`數學成績: ` + math_score[2]);
+
+
+        document.write(`英文平均成績：` + avg(eng_score) + `</br>`);
+        document.write(`數學平均成績：` + avg(math_score));
+
+
+        // document.getElementById(`英文平均成績：` + avg(eng_score) + `</br>`);
+        // document.getElementById(`數學平均成績：` + avg(math_score));
+
+
+    </script>
+</body>
+
+
+</html>

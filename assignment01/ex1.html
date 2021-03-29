@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      color: lightsalmon;
+    }
+
+    .profile {
+      background-image: url(./avatar.jpg);
+      width: 100px;
+    }
+
+    .name {
+      width: 296px;
+      /* text-align: center; */
+      border: 2px solid lightsalmon;
+      color: black;
+      font-weight: 900;
+      padding: 0 5px;
+      /* padding-bottom: 20px; */
+    }
+
+    .age {
+      width: 300px;
+      /* margin-top: 20px; */
+      background: lightsalmon;
+      color: #fff;
+      /* text-decoration: underline; */
+      padding: 0px 5px;
+      padding-top: 20px;
+    }
+
+    .mathScore {
+      width: 300px;
+      color: #fff;
+      background: lightsalmon;
+      padding: 0 5px;
+    }
+
+
+    .engScore {
+      width: 300px;
+      color: #fff;
+      background: lightsalmon;
+      margin-bottom: 20px;
+      padding: 0 5px;
+      padding-bottom: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="myData"></div>
+
+  <script>
+
+    const data = [
+
+      {
+        "name": "Alex",
+        "age": "21",
+        "mathScore": "90",
+        "engScore": "87"
+
+      },
+      {
+        "name": "Bill",
+        "age": "17",
+        "mathScore": "98",
+        "engScore": "95"
+      },
+      {
+        "name": "Cook",
+        "age": "22",
+        "mathScore": "73",
+        "engScore": "100"
+      }
+    ]
+
+    function appendData(data) {
+      var mainContainer = document.getElementById("myData");
+      for (var i = 0; i < data.length; i++) {
+        var div = document.createElement("div");
+        div.innerHTML =
+          '<div class="profile">' + 'img' + '</div>' +
+          '<div class="name">' + 'Name: ' + data[i].name + '</div>' +
+          '<div class="age">' + 'Age: ' + data[i].age + '</div>' +
+          '<div class="mathScore">' + 'Math score: ' + data[i].mathScore + '</div>' +
+          '<div class="engScore"">' + 'English score: ' + data[i].engScore + '</div>';
+        mainContainer.appendChild(div);
+      }
+    }
+
+
+    appendData(data);
+    var engScore = [87, 95, 100]
+    var mathScore = [90, 98, 73]
+
+    //建立一個名為avg引數魏array的函式
+    var avg = function (array) {
+      //將array的長度賦給len
+      var len = array.length;
+      var sum = 0;
+      //利用for迴圈遍歷陣列的內容，利用sum累加求和
+      for (var i = 0; i < len; i++) {
+        sum += array[i];
+      }
+      //        返回陣列的和與長度求平均值
+      return sum / len;
+    }
+    // console.log(avg(eng_score));
+    document.write(`Average English score：` + avg(engScore) + `</br>`);
+    document.write(`Average Math score：` + avg(mathScore));
+
+
+
+  </script>
+</body>
+
+</html>
